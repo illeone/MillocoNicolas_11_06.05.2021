@@ -189,3 +189,35 @@ body {
   opacity: 1;
 }
 
+
+
+/* .tag {
+  background-color: #FF6060;
+  border-radius: 10px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 14px;
+  margin: auto 10px;
+  min-width: 115px;
+  padding: 5px 15px;   
+  text-align: center; 
+} */
+
+
+.tags {
+  display: flex;
+  gap: 10px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.tag {
+  color: white;
+  background-color: #FF6060;
+  border: solid #FF6060;
+  border-radius: 10px;
+  padding: 2px 14px;
+}
+
+
+

@@ -1,37 +1,73 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate} from 'react-router-dom';
 import { useEffect, useState } from "react";
-// import Tags from "../components/Tags";
-import axios from 'axios';
+import Tags from "../components/Tags";
+import data from "../Data/data";
+import Collapse from '../components/Collapse';
+// import axios from 'axios';
+// import Collapse from '../components/Collapse';
+// import Thumbnail from '../components/Thumbnail';
 // import dataList from "../Data/data";
 
 
 const Housing = () => {
-    const { id } = useParams();
-    const [ data, setData] = useState ([])
+
+    const { id } = useParams()
+    const [selectedLogement, setSelectedLogement] = useState([])
+    // let navigate = useNavigate();
+
     useEffect(() => {
-        axios("../Data/data.json")
-            .then((res) => setData(res.data))
-        // const test = data.filter(value => value.id === {id}.id);
-        // console.log(test)
-             
-    }
-    , []);
 
-    const test = data.filter(value => value.id === {id}.id);
-        console.log(test)
+        const dataLogement = data.filter((logement) => logement.id === id)[0]
+        console.log(dataLogement)
 
-    
+        setSelectedLogement(dataLogement) 
 
-    return(
-        <div className="">
-            <ul>
-                {test.map((e, index) => (
-                    <li key={index}>{e.id}<br/>{e.title}</li>
-             ))}
-            </ul>   
-        </div>         
+        if (!dataLogement) {
+            <Navigate to="/404"/>
+          }
+
+    }, [id])
+
+    return (
+        <div>
+            
+            <main className="">
+
+                
+
+              <div className="ensemble">
+
+                <div>
+                <h1 className="">{selectedLogement.title}</h1>
+                <h2 className=""> {selectedLogement.location} </h2>
+
+
+
+                <Tags tags={selectedLogement.tags} />
+                </div>
+
+
+                <div className="">
+                     <span className="">{selectedLogement.host && selectedLogement.host.name}</span>
+                     <img className="" src={selectedLogement.host && selectedLogement.host.picture} alt=""/>
+                </div>
+                <div>
+                    {selectedLogement.rating}<span>/5 </span>
+                </div>
+
+              </div>
+
+                <section className="">
+                    <Collapse  title='Description' description={selectedLogement.description} />
+                    <Collapse  title='Équipements' description={selectedLogement.equipments} />
+                </section>
+
+            </main>
+            
+        </div>
     )
-};
 
+}
 
 export default Housing;
+

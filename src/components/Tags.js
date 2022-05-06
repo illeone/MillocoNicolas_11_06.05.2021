@@ -1,11 +1,19 @@
 import React from "react";
 
-function Tags({tag}) {
+function Tags({tags}) {
 
     return(
-        <div>
-            <span className="tag">{tag}test</span>
-        </div>
+        <div className="tags">
+        {
+            tags?.map(tag => {
+            return (
+            <p className="tag" key={tag}>{tag}</p>
+             )
+            })
+        }
+        {/* <span className="tag">{tags}</span> */}
+    </div>
+            
     );
 }
 
