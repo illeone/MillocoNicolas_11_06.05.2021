@@ -1,66 +1,84 @@
 import { useParams, Navigate} from 'react-router-dom';
 import { useEffect, useState } from "react";
 import Tags from "../components/Tags";
-import data from "../Data/data";
+// import data from "../Data/data";
 import Collapse from '../components/Collapse';
-// import axios from 'axios';
-// import Collapse from '../components/Collapse';
-// import Thumbnail from '../components/Thumbnail';
-// import dataList from "../Data/data";
+import Stars from '../components/Stars';
+import Gallery from '../components/Gallery';
+import axios from 'axios';
+
 
 
 const Housing = () => {
 
     const { id } = useParams()
-    const [selectedLogement, setSelectedLogement] = useState([])
-    // let navigate = useNavigate();
+    const [selectedLogement, setSelectedLogement] = useState(undefined)
 
     useEffect(() => {
+        axios("../Data/data.json")
+            .then((res) => {
+                const selectedLogement = res.data.find(value => value.id === {id}.id)
+                // console.log(res.data)
+                // console.log(id)
+                // console.log(dataLogement)
+                // console.log(selectedLogement)
+                setSelectedLogement(selectedLogement)
+            })
+            if (!selectedLogement === undefined) {
 
-        const dataLogement = data.filter((logement) => logement.id === id)[0]
-        console.log(dataLogement)
+                return <Navigate to="/about"/>
+               }
+       
+    }
+    , [id]) // eslint-disable-line react-hooks/exhaustive-deps
 
-        setSelectedLogement(dataLogement) 
 
-        if (!dataLogement) {
-            <Navigate to="/404"/>
-          }
 
-    }, [id])
+    // useEffect(() => {
+
+    //     const dataLogement = data.filter((logement) => logement.id === id)[0]
+    //     console.log(dataLogement)
+
+    //     setSelectedLogement(dataLogement) 
+
+    // }, [id])
+
+    // if (!selectedLogement === undefined) {
+
+    //    return <Navigate to="*"/>
+    //   }
 
     return (
         <div>
             
             <main className="">
 
-                
-
               <div className="ensemble">
 
                 <div>
-                <h1 className="">{selectedLogement.title}</h1>
-                <h2 className=""> {selectedLogement.location} </h2>
-
-
-
-                <Tags tags={selectedLogement.tags} />
+                    {selectedLogement && <h1 className="">{selectedLogement.title}</h1>}
+                    {selectedLogement && <h2 className=""> {selectedLogement.location} </h2>}
+                    {selectedLogement && <Tags tags={selectedLogement.tags} />}
                 </div>
 
+                <div>
+                    {selectedLogement && <Gallery photos={selectedLogement.pictures} />}
+                </div>
 
                 <div className="">
-                     <span className="">{selectedLogement.host && selectedLogement.host.name}</span>
-                     <img className="" src={selectedLogement.host && selectedLogement.host.picture} alt=""/>
+                     {selectedLogement && <span className="">{selectedLogement.host.name}</span>}
+                     {selectedLogement && <img className="" src={selectedLogement.host.picture} alt=""/>}
                 </div>
                 <div>
-                    {selectedLogement.rating}<span>/5 </span>
+                    {selectedLogement && <Stars rating={selectedLogement.rating} />}
                 </div>
 
               </div>
 
-                <section className="">
-                    <Collapse  title='Description' description={selectedLogement.description} />
-                    <Collapse  title='Équipements' description={selectedLogement.equipments} />
-                </section>
+                <div className="">
+                    {selectedLogement && <Collapse title='Description' description={selectedLogement.description} />}
+                    {selectedLogement && <Collapse title='Équipements' equipments={selectedLogement.equipments} />}
+                </div>
 
             </main>
             
