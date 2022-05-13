@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ArrowDown from '../assets/arrow_down.svg';
 
 const Collapse = ({title, description, equipments}) => {
     /* Crée un Hook d'état */
@@ -6,14 +7,14 @@ const Collapse = ({title, description, equipments}) => {
 
     return(
         <div className="dropdown">
-            <div className="dropdown_header" onClick={() => setOpen(!open)}>
-                <div className="dropdown_title">{title}</div>
+            <div className="dropdown_header" onClick={() => setOpen(!open)} >
+                {title}
+               <img className={`fleche-dropdown ${open}`} alt="" src={ArrowDown} />               
+            </div> 
+
+            <div className={open ? "dropdown_description-parent show" : "dropdown_description-parent"}>
+            {description ? <div className="dropdown_description">{description}</div> : <ul className="dropdown_list">{equipments}</ul>}
             </div>
-             {open && 
-            <div className="">
-                {description ? <p className="dropdown_description">{description}</p> : <ul className="dropdown_list">{equipments}</ul>} 
-            </div>
-            }
         </div>
     );
 }
