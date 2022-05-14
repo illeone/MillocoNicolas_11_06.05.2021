@@ -3,7 +3,9 @@ import Collapse from "../components/Collapse.js";
 const About = () => {
     return (
     <div className="banner_about">
-        <img className="banner_about_img" src="about_banner.jpg" alt="Montagnes enneigées" />
+        <div className="aze">
+            <img className="banner_about_img" src="about_banner.jpg" alt="Montagnes enneigées" />
+        </div>
         <div className="collapse">
             <Collapse title="Fiabilité" description="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."/>
             <Collapse title="Respect" description="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."/>

@@ -6,9 +6,9 @@ const Stars = ({rating}) => {
     const stars = []
     for (let i = 0; i < 5; i++) {
       if (i < rating) {
-        stars.push(<img src={starFull} key={i} />)
+        stars.push(<img src={starFull} key={i} alt=""/>)
       } else {
-        stars.push(<img src={starEmpty} key={i} />)
+        stars.push(<img src={starEmpty} key={i} alt="" />)
       }
     }
   

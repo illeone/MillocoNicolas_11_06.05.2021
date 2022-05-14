@@ -5,7 +5,7 @@ function Tags({tags}) {
     return(
         <div className="tags">
         {
-            tags?.map(tag => {
+            tags.map(tag => {
             return (
             <p className="tag" key={tag}>{tag}</p>
              )

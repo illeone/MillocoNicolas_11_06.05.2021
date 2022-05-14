@@ -1,9 +1,8 @@
 const Thumbnail = ({id, image, title}) => {
     return(
-        <div className="" id={id}>
-            <img className="" src={image} alt=""/>
-            <div className=""></div>
-            <span className="">{title}</span>
+        <div className="thumbnail_bloc" id={id}>
+            <img className="thumbnail" src={image} alt=""/>
+            <span className="thumbnail_title">{title}</span>
         </div>
     );
 }
