@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ArrowDown from '../assets/arrow_down.svg';
 
 const Collapse = ({title, description, equipments}) => {
-    /* Crée un Hook d'état */
+    /* Créer un Hook d'état */
     const [open, setOpen] = useState(false);
 
     return(
@@ -13,17 +13,14 @@ const Collapse = ({title, description, equipments}) => {
             </div> 
 
             <div className={open ? "dropdown_description-parent show" : "dropdown_description-parent"}>
-            {description ? <div className="dropdown_description">{description}</div> : <ul className="dropdown_list">{equipments}</ul>}
+            {description ? <div className="dropdown_description">{description}</div> 
+                            : <div className=" dropdown_description bloc_list_equipments"> 
+                                {equipments.map((equipments, index) => 
+                                    <ul key={index} className="dropdown_list"><li>{equipments}</li></ul>)}
+                              </div>}
             </div>
         </div>
     );
 }
 
 export default Collapse;
-
-
-    // if (open) {
-    //     return stars.push(<img src={starFull} key={i} alt=""/>)
-    //   } else {
-    //     stars.push(<img src={starEmpty} key={i} alt="" />)
-    //   }
