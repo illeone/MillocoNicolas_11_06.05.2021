@@ -35,10 +35,13 @@ const Gallery = ({photos}) => {
             
             )
             })}
+        {length > 1 &&
             <div>
-                <LeftArrow onClick={previousImg} className="left_arrow" style={{background:"blue"}} />
-                <RightArrow onClick={nextImg} className="right_arrow" style={{background:"blue"}} />
+                <LeftArrow onClick={previousImg} className="left_arrow"  />
+                <RightArrow onClick={nextImg} className="right_arrow" />
             </div>
+        }
+        <div className="number_length">{currentImage + 1}/{length}</div>
         
       </section>
     )
