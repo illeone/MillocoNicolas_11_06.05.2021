@@ -479,4 +479,31 @@ transform: scale(1.05);
   margin-top: 1.5rem;
   }
 
+  .gallery_image{
+    margin-bottom: 0;
+    height: 255px;
+  }
+
+  .gallery{
+    position: relative;
+    text-align: center;
+  }
+
+  .left_arrow{
+    width:25px;
+    left: 5%;
+    top: 90px;
+  }
+  .right_arrow{
+    width:25px;
+    right: 5%;
+    top: 90px;
+  }
+
+  .number_length{
+    position: relative;
+    top: -30px;
+    color:white;
+  }
+
 }
