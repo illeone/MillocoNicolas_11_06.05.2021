@@ -427,3 +427,56 @@ transform: scale(1.05);
 
 
 
+@media screen and (max-width: 750px) {
+
+
+
+  .banner{
+    display: block;
+  }
+  .banner_title {  
+    font-size: 26px;
+    top: 5%;
+    left:7%;
+    right: 5%;
+    text-align: start;
+  }
+  .txt4{
+    display: block;
+  }
+    /* retour à la ligne */
+
+  .banner_img_bloc{
+    height: 111px;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+  .banner_img{
+    border-radius: 10px;
+  }
+
+  .thumbnail_section {
+  background-color: white;
+  border-radius: 25px;
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center;
+  padding: 0px 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 92%;
+  margin-top: 0rem;
+
+  }
+  .thumbnail_bloc{
+  border-radius: 10px;
+  height: 290px;
+  width: 100%;
+  position: relative;
+  margin: 0rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5rem;
+  }
+
+}
