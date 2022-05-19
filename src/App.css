@@ -506,4 +506,65 @@ transform: scale(1.05);
     color:white;
   }
 
+
+
+  .title_logement{
+    font-size: 18px;
+  }
+  
+  .location_logement{
+    font-size: 14px;
+  }
+  
+  .tag {
+    border-radius: 5px;
+    font-size: 10px;
+  }
+
+
+
+
+
+
+  .details_logement{
+    display: block;
+  }
+
+  .hostInfo{
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .host{
+  margin-top: 1rem;
+  margin-bottom: 0;
+  }
+  .host_name{
+    width: 4rem;
+    /* margin-right: 2rem; */
+  }
+  .host_picture{
+    border-radius: 100%;
+    width: 48px;
+    height: 48px;
+  }
+
+  .rating{
+    margin-top: 1.8rem;
+    width: 9rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .stars_full{
+    width: 20px;
+  }
+  .stars_empty{
+    width: 20px;
+  }
+
 }
