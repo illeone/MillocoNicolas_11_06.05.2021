@@ -242,17 +242,77 @@ transform: scale(1.05);
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
-  height: 223px;
+  width: 100%;
+  height: 105%;
   object-fit: cover;
   border-radius: 25px;
   filter: brightness(70%);
+  animation-delay: 2s;
+  animation: opa 1.4s ease-in-out ;
+  -webkit-animation-delay: 0.4s;
+}
+
+.aze{
+  border-radius: 25px;
+  overflow: hidden;
+  object-fit: cover;
+  width: 93%;
+  height: 223px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: black;
+  margin-bottom: 2rem;
+}
+
+@keyframes opa {
+  0%   { opacity: 0.2; transform: translateY(-10%); }
+  100%   { opacity: 1;transform: translateY(0%) }
 }
 
 
-/* #################### Collapse #################### */
 
+@keyframes affichage{
 
+  0% {
+      transform: translateY(50%);
+      opacity: 0;
+  }
+  100%{
+      transform: translateY(0%);
+      opacity: 1;
+  } 
+}
+
+.dropdown{
+  animation: affichage 0s both;
+} 
+.dropdown{
+  animation: affichage 0.8s both;
+}
+.dropdown{
+  animation: affichage 0.8s both;
+}
+.dropdown{
+  animation: affichage 0.8s both;
+}
+
+.dropdown:nth-child(1) {
+  animation-delay:0.5s;
+}
+.dropdown:nth-child(2) {
+    animation-delay:0.7s;
+}
+.dropdown:nth-child(3) {
+    animation-delay:0.9s;
+}
+.dropdown:nth-child(4) {
+  animation-delay:1.1s;
+}
+
+/* .dropdown{
+  background-color: beige;
+} */
 .dropdown_header{
 
   color: #ffffff;
@@ -266,10 +326,9 @@ transform: scale(1.05);
   padding-left: 1rem;
 
   background-color: #ff6060;
-  border-radius: 5px;
   /* height: 25%; */
-  min-height: 50px;
-  width: 74%;
+  /* min-height: 50px; */
+  width: 83%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5rem;
@@ -294,7 +353,7 @@ transform: scale(1.05);
   border-bottom-right-radius: 5px;
   color: #ff6060;
   padding: 15px 4px 35px 10px;
-  width: 74%;
+  width: 83%;
   margin-left: auto;
   margin-right: auto;
   font-size: 16px;
@@ -318,18 +377,17 @@ transform: scale(1.05);
 }
 
 
-
-
-
 .collapse_logement{
   /* display: flex; */
   display: grid;
   /* grid-template-columns: repeat(2, 1fr); */
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  margin-left: -3%;
-  margin-right: -3%;
+  /* margin-left: -3%;
+  margin-right: -3%; */
 }
+
+
 
 .dropdown_list {
   color: #ff6060;
