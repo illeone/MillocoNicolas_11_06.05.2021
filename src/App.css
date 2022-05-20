@@ -425,6 +425,27 @@ transform: scale(1.05);
   color:white;
 }
 
+.error{
+  text-align: center;
+  color:#FF6060;
+  margin-bottom: 5rem;
+}
+.error_number{
+  font-size: 288px;
+  margin: 0;
+
+}
+
+.error_message{
+  font-size: 36px;
+  margin-bottom: 10rem;
+}
+
+.return_home{
+  color: #FF6060;
+  font-size: 18px;
+}
+
 
 
 @media screen and (max-width: 750px) {
@@ -593,6 +614,25 @@ transform: scale(1.05);
     width: 88%;
     /* margin-left: auto;
     margin-right: auto; */
+  }
+
+
+
+  .error{
+    margin-top: 5rem;
+  }
+  .error_number{
+    font-size: 96px;  
+  }
+  
+  .error_message{
+    font-size: 18px;
+    margin-bottom: 10rem;
+  }
+  
+  .return_home{
+    color: #FF6060;
+    font-size: 14px;
   }
 
 }
