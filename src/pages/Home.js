@@ -15,6 +15,7 @@ const Home = () => {
                     <span className="txt">Chez</span>
                     <span className="txt"> vous</span>
                     <span className="txt">, </span>
+                    <span className="txt4"> </span>
                     <span className="txt"> partout </span>
                     <span className="txt"> et </span>
                     <span className="txt"> ailleurs</span>
