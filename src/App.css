@@ -567,4 +567,32 @@ transform: scale(1.05);
     width: 20px;
   }
 
+
+
+  .collapse_logement{
+    display: block;
+  }
+
+  .dropdown_header{
+    width: 88%;
+    height: 35px;
+
+    line-height: 35px;
+  
+    font-size: 15px;
+  }
+  .fleche-dropdown{
+    width: 20px;
+
+    /* float:right; */
+    margin-top: 12px;
+
+  }
+
+  .dropdown_description {
+    width: 88%;
+    /* margin-left: auto;
+    margin-right: auto; */
+  }
+
 }
