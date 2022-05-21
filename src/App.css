@@ -783,4 +783,43 @@ transform: scale(1.05);
     font-size: 14px;
   }
 
+  .logo_img{
+    width: 95px;
+    height: 68;
+  }
+  .header_navlink {
+    font-size:16px ;
+  }
+  .header_navlink_active{
+    font-size:16px ;
+  }
+  .navigation li {
+    margin: 0 0 0 1rem;
+  }
+  .header_navlink_active:before {
+    top:22px;
+    left: 2.8rem
+  }
+  
+   /* #################### Footer #################### */
+  
+  .copyright {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width:750px)and (max-width: 830px) {
+
+    .thumbnail_bloc{
+      height: 380px;
+      width: 650px;
+    }
+    .gallery_image{
+      margin-bottom: 0;
+      height: 255px;
+    }
+    .banner_title {
+      font-size: 42px; 
+    }
+  }
+
 }
