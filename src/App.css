@@ -1,19 +1,23 @@
 html {
-  font-family: Montserrat, Arial, Helvetica, sans-serif;
-  font-weight: 500;
   scroll-behavior: smooth;
 }
 
-body {
-  margin: 0;
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
 }
 
+body {
+  margin: 0; 
+}
+
+/* #################### HEADER #################### */
 .header{
   display: flex;
   align-items: center;
   justify-content: space-between;
   
-  padding: 3% 10% 5% 10%;
+  padding: 3% 4% 5% 4%;
 }
 
 .logo_img{
@@ -36,8 +40,8 @@ body {
   font-size: 24px;
   color: #FF6060;
   text-decoration: underline 2px #FF6060;
+  text-underline-offset: 5px;
 }
-
 
 .header_navlink_active {
   text-decoration: none;
@@ -71,7 +75,7 @@ body {
   transform: scaleX(1);
 }
 
-
+/* #################### FOOTER #################### */
 
 .footer {
   width: 100%;
@@ -91,7 +95,7 @@ body {
 }
 
 
-
+/* #################### HOME #################### */
 
 .banner {
   position: relative;
@@ -103,7 +107,6 @@ body {
   border-radius: 25px;
   filter: brightness(70%);
   animation: az 1.3s ease-out both;
-  animation-delay: 0.5s;
 }
 @keyframes az {
   0%   { transform: scale(1.1); }
@@ -120,9 +123,6 @@ body {
   background-color: black;
   margin-bottom: 2rem;
 }
-
-
-
 
 .banner_title {
 
@@ -149,31 +149,31 @@ body {
 }
 
 span:nth-child(1) {
-  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 0.8s 0s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 span:nth-child(2) {
-  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 span:nth-child(3) {
-  animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 span:nth-child(4) {
-  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 span:nth-child(5) {
-  animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 span:nth-child(6) {
-  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
 span:nth-child(7) {
-  animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 @keyframes fade-in {
   100% {
@@ -206,7 +206,6 @@ span:nth-child(7) {
   overflow: hidden;
   transition: .4s;
   animation: small 1.3s ease-out;
-  animation-delay: 0.5s;
 }
 @keyframes small{
 
@@ -252,12 +251,7 @@ transform: scale(1.05);
  transition: .4s;
 }
 
-
-
-
-
-
-
+/* #################### ABOUT #################### */
 
 .About {
   position: relative;
@@ -274,7 +268,6 @@ transform: scale(1.05);
   filter: brightness(70%);
   animation-delay: 2s;
   animation: opa 1.4s ease-in-out ;
-  -webkit-animation-delay: 0.4s;
 }
 
 .aze{
@@ -421,25 +414,62 @@ transform: scale(1.05);
   padding: 0;
 }
 
-.bloc_list_equipments{
-  margin-top: -10px;
+/* #################### Gallery #################### */
+
+.gallery{
+  position: relative;
+  text-align: center;
 }
 
-/* ################################ */
+.gallery_image{
+  border-radius: 25px;
+  width: 93%;
+  height: 415px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  object-fit: cover;
+  animation: azw 1.4s ease-out both;
+}
 
+@keyframes azw {
+  0%   { transform: scale(0.97); }
+  100%   { transform: scale(1) }
+}
 
+.left_arrow{
+  position: absolute;
+  top: 170px;
+  left: 5%;
+  cursor: pointer;
+  transition: 0.4s;
+}
 
-/* .tag {
-  background-color: #FF6060;
-  border-radius: 10px;
-  color: #ffffff;
-  display: inline-block;
-  font-size: 14px;
-  margin: auto 10px;
-  min-width: 115px;
-  padding: 5px 15px;   
-  text-align: center; 
-} */
+.left_arrow:hover{
+  transform: scale(1.15);
+  transition: 0.4s;
+}
+
+.right_arrow{
+  position: absolute;
+  top: 170px;
+  right: 5%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.right_arrow:hover{
+  transform: scale(1.15);
+  transition: 0.4s;
+}
+
+.number_length{
+  position: relative;
+  top: -70px;
+  color:white;
+}
+
+/* #################### HOUSING #################### */
 
 .title_logement{
   color: #FF6060;
@@ -519,59 +549,7 @@ transform: scale(1.05);
   margin-top: -10px;
 }
 
-
-.gallery{
-  position: relative;
-  text-align: center;
-}
-
-.gallery_image{
-  border-radius: 25px;
-  width: 93%;
-  height: 415px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 2rem;
-  object-fit: cover;
-  animation: azw 1.4s ease-out both;
-}
-
-@keyframes azw {
-  0%   { transform: scale(0.97); }
-  100%   { transform: scale(1) }
-}
-
-.left_arrow{
-  position: absolute;
-  top: 170px;
-  left: 5%;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.left_arrow:hover{
-  transform: scale(1.15);
-  transition: 0.4s;
-}
-
-.right_arrow{
-  position: absolute;
-  top: 170px;
-  right: 5%;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.right_arrow:hover{
-  transform: scale(1.15);
-  transition: 0.4s;
-}
-
-.number_length{
-  position: relative;
-  top: -70px;
-  color:white;
-}
+/* #################### 404 #################### */
 
 .error{
   text-align: center;
@@ -594,12 +572,53 @@ transform: scale(1.05);
   font-size: 18px;
 }
 
+/* ######################################## RESPONSIVE ######################################## */
+
+@media screen and (min-width:750px)and (max-width: 830px) {
+
+  .thumbnail_bloc{
+    height: 380px;
+    width: 650px;
+  }
+  .gallery_image{
+    margin-bottom: 0;
+    height: 255px;
+  }
+  .banner_title {
+    font-size: 42px; 
+  }
+}
 
 
 @media screen and (max-width: 750px) {
 
+  /* #################### Header #################### */
 
+.logo_img{
+  width: 95px;
+  height: 68;
+}
+.header_navlink {
+  font-size:16px ;
+}
+.header_navlink_active{
+  font-size:16px ;
+}
+.navigation li {
+  margin: 0 0 0 1rem;
+}
+.header_navlink_active:before {
+  top:22px;
+  left: 2.8rem
+}
 
+ /* #################### Footer #################### */
+
+.copyright {
+  font-size: 12px;
+}
+
+/* ##################### Home #################### */
   .banner{
     display: block;
   }
@@ -636,8 +655,8 @@ transform: scale(1.05);
   width: 92%;
   margin-top: 0rem;
 
-  }
-  .thumbnail_bloc{
+}
+.thumbnail_bloc{
   border-radius: 10px;
   height: 290px;
   width: 100%;
@@ -646,7 +665,11 @@ transform: scale(1.05);
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.5rem;
-  }
+}
+
+
+
+/* #################### Gallery #################### */
 
   .gallery_image{
     margin-bottom: 0;
@@ -675,7 +698,7 @@ transform: scale(1.05);
     color:white;
   }
 
-
+  /* #################### Housing #################### */
 
   .title_logement{
     font-size: 18px;
@@ -736,7 +759,7 @@ transform: scale(1.05);
     width: 20px;
   }
 
-
+/* #################### Collapse #################### */
 
   .collapse_logement{
     display: block;
@@ -764,7 +787,7 @@ transform: scale(1.05);
     margin-right: auto; */
   }
 
-
+  /* #################### 404 #################### */
 
   .error{
     margin-top: 5rem;
@@ -782,44 +805,8 @@ transform: scale(1.05);
     color: #FF6060;
     font-size: 14px;
   }
+} 
 
-  .logo_img{
-    width: 95px;
-    height: 68;
-  }
-  .header_navlink {
-    font-size:16px ;
-  }
-  .header_navlink_active{
-    font-size:16px ;
-  }
-  .navigation li {
-    margin: 0 0 0 1rem;
-  }
-  .header_navlink_active:before {
-    top:22px;
-    left: 2.8rem
-  }
-  
-   /* #################### Footer #################### */
-  
-  .copyright {
-    font-size: 12px;
-  }
 
-  @media screen and (min-width:750px)and (max-width: 830px) {
 
-    .thumbnail_bloc{
-      height: 380px;
-      width: 650px;
-    }
-    .gallery_image{
-      margin-bottom: 0;
-      height: 255px;
-    }
-    .banner_title {
-      font-size: 42px; 
-    }
-  }
 
-}
