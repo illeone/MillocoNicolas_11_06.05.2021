@@ -31,7 +31,7 @@ const Housing = () => {
     if (selectedLogement === undefined) {
         console.log(undefined)
 
-        return <Navigate to="*"/>
+        return <Navigate to="/Error404"/>
        }
 
     return (

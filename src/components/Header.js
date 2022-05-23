@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.jpg"
 
 const Header = () => {
     return (
     <header className="header">
         <div className="logo">
-            <img className="logo_img" src="logo.jpg" alt="Kasa" />
+            <img className="logo_img" src={logo} alt="Kasa" />
         </div>
         <div className="navigation">
             <ul>
