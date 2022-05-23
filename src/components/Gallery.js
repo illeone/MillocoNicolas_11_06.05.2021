@@ -2,7 +2,12 @@ import React, {useState} from "react";
 import {ReactComponent as LeftArrow} from '../assets/left.svg';
 import {ReactComponent as RightArrow} from '../assets/right.svg';
 
-
+/**
+ * Afficher la gallerie d'images
+ * @param {props} photos charge la gallerie avec conditions suivant et retour
+ * Utilisation de setState et de useSate
+ * @returns {JSX} composant react
+ */
 const Gallery = ({photos}) => {
     const [currentImage, setCurrentImage] = useState(0)
     const length = photos?.length

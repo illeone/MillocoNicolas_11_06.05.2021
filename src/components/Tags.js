@@ -1,5 +1,8 @@
-import React from "react";
-
+/**
+ * Afficher les tags
+ * @param {props} tags tabbleau de tag
+ * @returns {jsx} composant react
+ */
 function Tags({tags}) {
 
     return(
