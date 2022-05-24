@@ -783,6 +783,7 @@ transform: scale(1.05);
 
   .dropdown_description {
     width: 88%;
+    font-size: 12px;
     /* margin-left: auto;
     margin-right: auto; */
   }
